@@ -23,7 +23,8 @@ namespace Kreta
     /// </summary>
     public partial class MainWindow : Window
     {
-        private void miStudents_Click(object sender, RoutedEventArgs e)
+        public StudentViewModel studentViewModel = new StudentViewModel();
+        private void miStudent_Click(object sender, RoutedEventArgs e)
         {
             StudentPage studentPage = new StudentPage(studentViewModel);
             Navigation.Navigate(studentPage);

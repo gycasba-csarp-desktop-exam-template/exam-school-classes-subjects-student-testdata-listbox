@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Kreta.ViewModel;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,9 +21,12 @@ namespace Kreta.View.Page
     /// </summary>
     public partial class StudentPage : UserControl
     {
-        public StudentPage()
+        private StudentViewModel studentViewModel;
+        public StudentPage(StudentViewModel studentViewModel)
         {
+            this.studentViewModel = studentViewModel;
             InitializeComponent();
+            this.DataContext = studentViewModel;
         }
     }
 }

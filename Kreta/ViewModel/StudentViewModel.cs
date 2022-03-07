@@ -1,12 +1,24 @@
-﻿using System;
+﻿using Kreta.Models;
+using Kreta.Repositories;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Kreta.ViewModel
 {
-    class StudentViewModel
+    public class StudentViewModel
     {
+        private Students students;
+        private ObservableCollection<Student> students2;
+
+        public StudentViewModel()
+        {
+            students = new Students();
+            students2 = new ObservableCollection<Student>(students.Studentss);
+        }
+        public ObservableCollection<Student> Student { get => students2; set => students2 = value; }
     }
 }
