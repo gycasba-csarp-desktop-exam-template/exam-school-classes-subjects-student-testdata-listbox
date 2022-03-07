@@ -27,7 +27,7 @@ namespace Kreta.Models
         {
             get
             {
-                return id + "   " + fullname;
+                return id + ". " + fullname;
             }
         }
 
